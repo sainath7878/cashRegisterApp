@@ -1,3 +1,7 @@
+body{
+    padding: 0;
+    margin: 0;
+}
 .container{
     text-align: center;
     width:80%;
@@ -6,6 +10,7 @@
     background-color:darkblue;
     padding: 1rem;
     border-radius: 1rem;
+    margin-top: 2rem;
 }
 
 .container .description{
@@ -39,13 +44,13 @@ input{
 }
 
 table{
-    width: 40%;
+    width:40%;
     font-size: large;
-    margin: auto;
     padding: 0.5rem;
-    border:1px solid white;
     border-collapse: collapse;
     margin-bottom:1rem;
+    margin: auto;
+    visibility: hidden;
 }
 th,td{
     padding: 0.2rem;
@@ -82,4 +87,5 @@ table caption{
 .cash-given{
     display: none;
 }
+
 

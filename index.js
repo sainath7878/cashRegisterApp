@@ -5,6 +5,7 @@ const errorMessage = document.querySelector(".error-message");
 const notesToBeReturned = document.querySelectorAll(".notes");
 const btnNext = document.querySelector(".btn-next");
 const cashGivenDiv = document.querySelector(".cash-given");
+const notesTable = document.querySelector("Table");
 
 const availableCurrencyNotes = [2000,500,100,20,5,1];
 
@@ -20,6 +21,7 @@ btnNext.addEventListener("click", function showCashGivenDiv(){
                 if(billAmount.value < 0){
                     showErrorMessage("Enter a valid Bill Amount");
                 }
+                notesTable.style.visibility="visible";
                 const amountToBeReturned = cashGiven.value - billAmount.value;
                 calculateAmount(amountToBeReturned);
             }
