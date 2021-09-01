@@ -1,0 +1,85 @@
+.container{
+    text-align: center;
+    width:80%;
+    margin: auto;
+    color:white;
+    background-color:darkblue;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.container .description{
+    font-size: larger;
+}
+label{
+    display: block;
+    font-size: large;
+    font-weight: bold;
+}
+
+input{
+    display: block;
+    width:30%;
+    margin: auto;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-size: large;
+    text-align: center;
+}
+
+.btn-check{
+    padding:0.5rem;
+    font-size: large;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none;
+    margin: auto;
+}
+
+table{
+    width: 40%;
+    font-size: large;
+    margin: auto;
+    padding: 0.5rem;
+    border:1px solid white;
+    border-collapse: collapse;
+    margin-bottom:1rem;
+}
+th,td{
+    padding: 0.2rem;
+    border:1px solid white;
+    border-collapse: collapse;
+}
+
+table caption{
+    font-size: xx-large;
+    margin: 1rem;
+}
+
+.error-message{
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    width:50%;
+    border:1px solid #EF4444;
+    border-radius: 1rem;
+    background-color: #EF4444;
+    color:white;
+    margin-top: 1rem;
+    display: none;
+}
+
+.btn-next{
+    padding:0.5rem;
+    font-size: large;
+    border-radius: 0.5rem;
+    margin:1rem ;
+    cursor: pointer;
+}
+
+.cash-given{
+    display: none;
+}
+
