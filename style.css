@@ -88,4 +88,9 @@ table caption{
     display: none;
 }
 
+.return-change{
+    margin-top: 1rem;
+    visibility: hidden;
+    font-size: larger;
+}
 
