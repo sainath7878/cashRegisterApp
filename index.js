@@ -12,13 +12,13 @@ const availableCurrencyNotes = [2000,500,100,20,5,1];
 
 btnNext.addEventListener("click", function showCashGivenDiv(){
     errorMessage.style.display = "none";
-    if(billAmount.value > 0){
+    if(Number(billAmount.value) > 0){
         btnNext.style.display = "none";
         cashGivenDiv.style.display = "block";
         btnCheck.style.display = "block";
         btnCheck.addEventListener("click" ,function validateBillandCase(){
             errorMessage.style.display = "none";
-            if(Number(cashGiven.value > 0)){
+            if(Number(cashGiven.value > 0) && Number(billAmount.value) > 0){
                 if(Number(cashGiven.value) > Number(billAmount.value) ){
                     notesTable.style.visibility="visible";
                     const amountToBeReturned = cashGiven.value - billAmount.value;
@@ -35,7 +35,7 @@ btnNext.addEventListener("click", function showCashGivenDiv(){
                 }
             }
             else{
-                showErrorMessage("Cash Given must be positive");
+                showErrorMessage("Entered fields must be positive");
             }
             
         })
@@ -48,6 +48,8 @@ btnNext.addEventListener("click", function showCashGivenDiv(){
 function showErrorMessage(msg){
     errorMessage.style.display = "block";
     errorMessage.innerText = msg;
+    returnChange.style.visibility = "hidden";
+    notesTable.style.visibility="hidden";
 }
 
 function calculateAmount(amount){
