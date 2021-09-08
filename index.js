@@ -26,6 +26,7 @@ btnNext.addEventListener("click", function showCashGivenDiv(){
                 }
                 else if(Number(cashGiven.value) === Number(billAmount.value)){
                     returnChange.style.visibility = "visible";
+                    notesTable.style.visibility="hidden";
                     const amountToBeReturned = cashGiven.value - billAmount.value;
                     returnChange.innerText = "Change to be returned = " + amountToBeReturned;
                 }
