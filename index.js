@@ -19,10 +19,15 @@ btnNext.addEventListener("click", function showCashGivenDiv(){
         btnCheck.addEventListener("click" ,function validateBillandCase(){
             errorMessage.style.display = "none";
             if(Number(cashGiven.value > 0)){
-                if(Number(cashGiven.value) >= Number(billAmount.value) ){
+                if(Number(cashGiven.value) > Number(billAmount.value) ){
                     notesTable.style.visibility="visible";
                     const amountToBeReturned = cashGiven.value - billAmount.value;
                     calculateAmount(amountToBeReturned);
+                }
+                else if(Number(cashGiven.value) === Number(billAmount.value)){
+                    returnChange.style.visibility = "visible";
+                    const amountToBeReturned = cashGiven.value - billAmount.value;
+                    returnChange.innerText = "Change to be returned = " + amountToBeReturned;
                 }
                 else{
                     showErrorMessage("Cash Given must be greater than Bill Amount");
@@ -46,7 +51,7 @@ function showErrorMessage(msg){
 
 function calculateAmount(amount){
     returnChange.style.visibility = "visible";
-    returnChange.innerText = returnChange.innerText + " " + amount;
+    returnChange.innerText = "Change to be returned = " + amount;
     for(var i=0 ;i<availableCurrencyNotes.length;i++ ){
         var numberOfNotes = Math.trunc(amount / availableCurrencyNotes[i]);
         amount = amount%availableCurrencyNotes[i];
